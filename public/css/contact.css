@@ -1,0 +1,334 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    font-family: "Roboto Slab", serif;
+}
+
+main{
+    margin: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    width: 100%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff; /* Color blanco para los enlaces por defecto */
+}
+
+header nav a:visited {
+    color: #fff;
+    text-decoration-color: #c8d6fb;
+}
+
+header nav a:active {
+    color: #c8d6fb; /* Color para los enlaces activos */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001652;
+    color: #fff;
+    padding: 0 30px;
+    width: 100%;
+    position: fixed; /* Navbar en posición fija */
+    top: 0;
+    z-index: 99999;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.category {
+    margin: 5px;
+}
+
+.nav-menu i {
+    margin: 5px;
+    font-size: 25px;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+form {
+    width: 85%;
+    border: 1px solid #c8d6fb;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+}
+
+body .form {
+    display: flex;
+    justify-content: center;
+}
+
+form div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+form img {
+    width: 30%;
+}
+
+label {
+    display: block;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#mensaje {
+    width: 80%;
+    resize: none;
+}
+
+#captchaInput {
+    width: 35%;
+}
+
+select {
+    width: 25%;
+}
+
+#subscribe-container {
+    display: flex; /* Utiliza flexbox para alinear elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    margin-bottom: 15px; /* Ajusta el margen inferior según sea necesario */
+}
+
+/* Estilos para el label de suscripción */
+#subscribe-label {
+    margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
+
+button {
+    background-color: #001652;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #6c799b;
+    border: solid #001652 1px;
+    border-radius: 10px;
+    color: #001652;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.VolverAlInicio {
+    background-color: #6c799b;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001652;
+    color: #fff;
+    padding: 10px 5%;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total del footer */
+    height: auto;
+}
+
+footer img {
+    height: 150px;
+    width: auto;
+}
+
+/* Media queries para diferentes tamaños de dispositivos */
+/* Para tablet */
+@media (max-width: 768px) {
+    body .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%; /* Ajustar para ocupar todo el ancho del contenedor */
+        max-width: 600px; /* Ancho máximo para que no sea demasiado grande en tablets */
+        border: 1px solid #c8d6fb;
+        border-radius: 10px;
+        text-align: left;
+        padding: 10px;
+        margin: 20px auto; /* Centrar el formulario */
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    select {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: auto; /* Altura automática para permitir múltiples líneas */
+        padding: 5px 2%; /* Ajustado el padding para evitar que el contenido se desborde en dispositivos pequeños */
+    }
+}
+
+/* Para celular */
+@media (max-width: 480px) {
+    body .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%; /* Ajustar para ocupar todo el ancho del contenedor */
+        max-width: 400px; /* Ancho máximo para que no sea demasiado grande en celulares */
+        border: 1px solid #c8d6fb;
+        border-radius: 10px;
+        text-align: left;
+        padding: 10px;
+        margin: 5px auto; /* Centrar el formulario */
+        padding-top: 60px; /* Espacio suficiente para evitar superposición con el navbar */
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    form img {
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    header {
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: auto; /* Altura automática para permitir múltiples líneas */
+        padding: 5px 2%; /* Ajustado el padding para evitar que el contenido se desborde en dispositivos pequeños */
+    }
+}
+
+/* Para resoluciones pequeñas, por ejemplo, 320px */
+@media (max-width: 320px) {
+    body .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%; /* Ajustar para ocupar todo el ancho del contenedor */
+        max-width: 300px; /* Ancho máximo para que no sea demasiado grande en resoluciones pequeñas */
+        border: 1px solid #c8d6fb;
+        border-radius: 10px;
+        text-align: left;
+        padding: 10px;
+        margin: 5px auto; /* Centrar el formulario */
+        padding-top: 80px; /* Espacio suficiente para evitar superposición con el navbar */
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    form img {
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    header {
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: auto; /* Altura automática para permitir múltiples líneas */
+        padding: 5px 2%; /* Ajustado el padding para evitar que el contenido se desborde en dispositivos pequeños */
+    }
+}
